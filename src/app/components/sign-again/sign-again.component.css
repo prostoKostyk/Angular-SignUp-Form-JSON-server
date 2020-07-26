@@ -1,0 +1,83 @@
+.shadow {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 16px;
+    background-color: rgba(1, 1, 1, 0.8);
+    z-index: 4;
+    overflow: auto;
+}
+
+.modal {
+    position: fixed;
+    border: 1px solid black;
+    width: 80%;
+    max-width: 100%;
+    min-width: 600px;
+    height: 400px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    background: #fff;
+}
+
+.modal__h3 {
+    margin-left: 3%;
+}
+
+.modal__newuser {
+    width: 90%;
+    margin-left: 5%;
+    border: 1px solid black;
+}
+
+.modal__newuser th {
+    width: 20%;
+}
+
+.modal__newuser td {
+    vertical-align: middle;
+    padding: 3px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #56433D;
+}
+.modal__table-container {
+    height: 200px;
+    width: 90%;
+    margin-left: 5%;
+    overflow-y: scroll;
+}
+.modal__oldusers {
+    border: 1px solid black;
+}
+
+.modal__oldusers th {
+    width: 20%;
+}
+
+.modal__oldusers td {
+    vertical-align: middle;
+    padding: 3px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #56433D;
+}
+.modal__button {
+    position: absolute;
+    width: 150px;
+    padding: 5px;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0%);
+    background-color: blue;
+    color: #FFFFFF;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: 0;
+    cursor: pointer;
+}
