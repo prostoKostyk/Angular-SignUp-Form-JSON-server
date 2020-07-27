@@ -1,49 +1,22 @@
 {
   "users": [
     {
-      "firstName": "1Константин",
-      "lastName": "Осокин",
-      "gender": "Male",
-      "age": 12,
-      "email": "osokinkostyan@mail.ru",
-      "password": "123123123",
-      "id": 1
-    },
-    {
-      "firstName": "123",
-      "lastName": "123213",
-      "gender": "Male",
-      "age": 2,
-      "email": "123osokinkostyan@mail.ru",
-      "password": "123132",
-      "id": 2
-    },
-    {
       "firstName": "Константин",
       "lastName": "Осокин",
       "gender": "Male",
-      "age": 10,
-      "email": "osokinkostyan@mail.ru",
+      "age": 99,
+      "email": "osockin.kos@yandex.ru",
       "password": "12345678",
-      "id": 3
+      "id": 1
     },
     {
-      "firstName": "2Константин",
-      "lastName": "2Осокин",
-      "gender": "Male",
-      "age": 11,
-      "email": "osokinkostyan@mail.ru",
-      "password": "123123123",
-      "id": 4
-    },
-    {
-      "firstName": "3Константин",
-      "lastName": "3Осокин",
+      "firstName": "Константин2",
+      "lastName": "Осокин2",
       "gender": "Female",
-      "age": 12,
-      "email": "osokinkostyan@mail.ru",
-      "password": "123123123",
-      "id": 5
+      "age": 14,
+      "email": "osockin.kos@yandex.ru",
+      "password": "12345678",
+      "id": 2
     }
   ]
 }

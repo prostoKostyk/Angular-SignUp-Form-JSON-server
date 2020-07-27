@@ -15,6 +15,7 @@ export class MainComponent implements OnInit {
   newUser: User;
   allUsers = [];
   isModalOpen = false;
+  formWidth = 349;
   constructor(private router: Router, public userService: UserService) {
     this.form = new FormGroup({
       "firstname": new FormControl("", [Validators.required]),

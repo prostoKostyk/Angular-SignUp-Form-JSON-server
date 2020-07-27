@@ -1,21 +1,20 @@
-<div class="signup">
-    <table class="signup__header">
-        <tr>
-            <td class="signup__header-label">Sign Up</td>
-        </tr>
-    </table>
+Width: <input type="number" min="280" max="450" [(ngModel)] = formWidth/> px
+<div class="signup" [style.width] = "formWidth + 'px'">
+    <div class="signup__header">
+        <div class="signup__header-logo">Sign Up</div>
+    </div>
     <form class="signup__form" [formGroup]="form" novalidate name="form" novalidate>
         <div class="signup__flex-container">
-            <div class="signup__field-name">
-                <input class="signup__input" type="text" name="firstname" placeholder="First name"
+            <div class="signup__field-default">
+                <input class="signup__input-default" type="text" name="firstname" placeholder="First name"
                     formControlName="firstname" />
                 <div class="signup__error"
                     *ngIf="form['controls']['firstname'].invalid && form['controls']['firstname'].touched">
                     Enter your first name
                 </div>
             </div>
-            <div class="signup__field-name">
-                <input class="signup__input" type="text" placeholder="Last name" formControlName="lastname"
+            <div class="signup__field-default">
+                <input class="signup__input-default" type="text" placeholder="Last name" formControlName="lastname"
                     name="lastname" />
                 <div class="signup__error"
                     *ngIf="form['controls']['lastname'].invalid && form['controls']['lastname'].touched">
@@ -28,26 +27,27 @@
                 <div class="signup__label-gender">Gender</div>
                 <div class="signup__checkbox-container" (click)="changeGender('Male')">
                     <input class="signup__check" type="radio" formControlName="gender" name="gender" value="Male" />Male
-                    <span class="checkmark"></span>
+                    <span class="signup__check-checkmark"></span>
                 </div>
                 <div class="signup__checkbox-container" (click)="changeGender('Female')">
                     <input class="signup__check" type="radio" formControlName="gender" name="gender"
                         value="Female" />Female
-                    <span class="checkmark"></span>
+                    <span class="signup__check-checkmark"></span>
                 </div>
             </div>
             <div class="signup__field-age">
                 <div class="signup__label-age">Age</div>
                 <input class="signup__input-age" type="number" min="10" max="100" formControlName="age" name="age" />
-                <div class="signup__error font-11" *ngIf="form['controls']['age'].errors && form['controls']['age'].touched">
+                <div class="signup__error font-11"
+                    *ngIf="form['controls']['age'].errors && form['controls']['age'].touched">
                     Must be in [10; 100]
                 </div>
             </div>
         </div>
         <div class="signup__flex-container">
-            <div class="signup__field-name">
-                <div class="signup__label">Email</div>
-                <input class="signup__input" type="text" formControlName="email" name="email" />
+            <div class="signup__field-default">
+                <div class="signup__label-default">Email</div>
+                <input class="signup__input-default" type="text" formControlName="email" name="email" />
                 <div *ngIf="form['controls']['email'].errors && form['controls']['email'].touched">
                     <div class="signup__error" *ngIf="form['controls']['email'].errors.email">
                         Email is invalid
@@ -59,22 +59,24 @@
             </div>
         </div>
         <div class="signup__flex-container" formGroupName="PasswordsForm">
-            <div class="signup__field-name">
-                <div class="signup__label">Password</div>
-                <input minlength="8" class="signup__input" type="password" formControlName="password" name="password" />
+            <div class="signup__field-default">
+                <div class="signup__label-default">Password</div>
+                <input minlength="8" class="signup__input-default" type="password" formControlName="password" name="password" />
                 <div
                     *ngIf="form.get('PasswordsForm')['controls']['password'].errors && form.get('PasswordsForm')['controls']['password'].touched">
-                    <div class="signup__error" *ngIf="form.get('PasswordsForm')['controls']['password'].errors.required">
+                    <div class="signup__error"
+                        *ngIf="form.get('PasswordsForm')['controls']['password'].errors.required">
                         Password can't be blank
                     </div>
-                    <div class="signup__error" *ngIf="form.get('PasswordsForm')['controls']['password'].errors.minlength">
+                    <div class="signup__error"
+                        *ngIf="form.get('PasswordsForm')['controls']['password'].errors.minlength">
                         Must be at least 8 characters
                     </div>
                 </div>
             </div>
-            <div class="signup__field-name">
-                <div class="signup__label">Confirm Password</div>
-                <input minlength="8" class="signup__input" type="password" formControlName="passwordConfirm"
+            <div class="signup__field-default">
+                <div class="signup__label-default">Confirm Password</div>
+                <input minlength="8" class="signup__input-default" type="password" formControlName="passwordConfirm"
                     name="passwordConfirm" />
                 <div class="signup__error"
                     *ngIf="form.get('PasswordsForm')['controls']['passwordConfirm'].errors && form.get('PasswordsForm')['controls']['passwordConfirm'].errors.match && form.get('PasswordsForm')['controls']['passwordConfirm'].touched">
